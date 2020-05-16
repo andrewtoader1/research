@@ -1,0 +1,57 @@
+
+
+
+
+
+---
+NOTE: setup should be completed before this. For those instructions, separate file named 'setup_instructions.txt' can be found in the 'setup' folder
+---
+
+
+
+
+-----------------------------------------------------------------------------------
+
+1.) To launch program, open 'Terminal' app.  This program will run from the terminal. If you are ever in doubt to what is happening, look at the last text displayed in the terminal, and that will explain what to  do
+
+-
+
+2.) Select the folder containing the '0min.nd2', '5min.nd2', '30min.nd2', and '60min.nd2' files. They should be folders labeled either 'ROI1', ROI2, or 'ROI3'.
+
+	If you select an invalid folder, the program will indefinitely ask you to re-select a folder until you chose a valid one. If you want to exit the program at this time for any reason, you must press the keys (command + q).
+
+-
+
+3.) If you have analyzed this data previously, it will ask you if you want to reanalyze (delete previous analysis), alter the previous data, or do nothing (quit the program).  If you haven't analyzed this data before, you will have to crop (select the beginning point of) each nd2 file.
+	
+	NOTE: if you want to re-crop nd2 files, you must delete all '.pkl' files from the ROI folder. If you do re-crop files, I suggest also reanalyzing that data
+
+-
+
+--- STEP 4 IS ONLY IF THIS IS YOUR FIRST TIME ANALYZING THAT ROI---
+4.) To crop the nd2 files, use the 'a' and 'd' keys to scroll through the z-level. Once you want to make the current frame you are on the beginning frame, press the 'e' key (cannot be undone once 'e' key is pressed).
+
+	The picture on the right will be a reference image. Try to crop every picture to look like the reference image. Crop all of the pictures to where you see mostly vessels, and ideally no dura.
+
+-
+
+5.) The next step is to specify the start and end point of the vessels which you want to analyze. Use the 'a' and 'd' keys to scroll through the z stack. 'q' is used to move on to the next time point (0, 5, 30, then 60). The 'e' key is used to accept the position of the mouse click. When choosing the 2 points, they should be as perpendicular to the vessel as possible, and lie outside of the vessel wall
+
+	Start by selecting a starting point by DOUBLE CLICKING outside of the vessel. If you do not double click, the program will FAIL. If you did not double click or are in doubt that you double clicked, double click again; the program will not register the double click until the 'e' key is pressed. 
+	
+	Once you select the start point, you will have to type in a name of that vessel in the terminal window. Name the vessels consistently (a# for artery, v# for vein, etc.) across time. Once you have selected the name, press enter. Then you will be prompted to double click the endpoint. Press 'e' once you have done that, and a line will show up across the vessel 
+
+	Once you are done analyzing that time point, press 'q' to advance to the next time point. If you measure the same vessel from previous time points, use the same name. You do not need to measure the same vessels for each time point, but if a vessel is not measured at 0min, 5min, 30min, and 60min, no percent change reading will be produced.
+
+	NOTE: if you mess up while drawing the vessels, that is fine. There will be a part later in the program asking you if you want to alter the data.
+
+-
+
+6.) Once you are done measuring diameters, a menu asking you if you want to alter the data will pop up. You can type either 'y' or 'n'. You can change the name of a data point, change the measurement of that data point if it does not look right, remove a data point, or add a data point. For this step, follow the instructions in the terminal.
+
+	NOTE: if you are remeasuring a vessel or adding an entry, the program will let you measure however many vessels you want. Only the first vessel you measure will be used to update the diameter list
+	ALSO: if you are remeasuring a vessel or adding an entry, it does not matter what you name the vessel after you select the starting point; the name will be either he name of the last vessel or the name you gave it when asked the first time
+
+-
+
+7.) The results are saved in the results folder within that ROI folder. They are contained in 2 text files, and should be the only ones in the results folder. The reference images that mark the vessels measured are contained within the folder inside the results folder.

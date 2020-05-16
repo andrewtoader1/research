@@ -1,0 +1,27 @@
+To set up (Mac):
+
+1.) move the mpAnalysis folder into your documents folder on your computer
+
+2.) open 'Terminal' application
+
+3.) type (EXACTLY):
+	
+	python3 ~/Documents/mpAnalysis/setup/setup.py
+
+4.) type the line(EXACTLY): 
+
+	sudo nano ~/.bash_profile
+
+5.) it will prompt you for a password. This is your user password to your computer. Note that there will be no moving cursor
+
+6.) DO NOT ALTER ANYTHING IN THIS FILE. Scroll down with the down arrow key until you reach the bottom of the text file. In the very last line, type (EXACTLY):
+
+	alias mpa="python3 ~/Documents/mpAnalysis/vesselDiameters.py"
+	alias mpa-excel="python3 ~/Documents/mpAnalysis/gatherRoiData.py"
+
+7.) In this exact order, press the keys: 'control + o', then 'enter', then 'control + x'
+
+8.) to test that the setup was successful, quit the terminal (command + q), and reopen it. Type in mpa, and that should prompt you to select a file. If it does, the setup was successful. At this point, quit the program (command + q), and find the 'instructions.txt' file to read the instructions on how to use the program
+
+
+*Note: in terminal, you cannot move your cursor with your mouse; you must use the side/up/down keys
